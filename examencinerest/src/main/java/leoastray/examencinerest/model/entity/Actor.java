@@ -1,10 +1,14 @@
 package leoastray.examencinerest.model.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity 
@@ -22,12 +26,16 @@ public class Actor {
     @Column(nullable = false, length = 60)
     private String nacionalidad;
 
+    @OneToMany(mappedBy = "actor")
+    private List<Reparto> repartos = new ArrayList<>();
+
     public Actor() {
     }
 
-    public Actor(String nombre, String nacionalidad) {
+    public Actor(String nombre, String nacionalidad, List<Reparto> repartos) {
         this.nombre = nombre;
         this.nacionalidad = nacionalidad;
+        this.repartos = repartos;
     }
 
     public Long getId() {
@@ -52,6 +60,15 @@ public class Actor {
 
     public void setNacionalidad(String nacionalidad) {
         this.nacionalidad = nacionalidad;
+    }
+
+    public List<Reparto> getRepartos() {
+        return repartos;
+    }
+
+
+    public void setRepartos(List<Reparto> repartos) {
+        this.repartos = repartos;
     }
     
 }

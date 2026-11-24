@@ -1,10 +1,15 @@
 package leoastray.examencinerest.model.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity 
@@ -27,6 +32,9 @@ public class Pelicula {
 
     @Column()
     private Integer duracion;
+
+    @OneToMany(mappedBy = "pelicula", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Reparto> repartos = new ArrayList<>();
 
     public Pelicula() {
     }
@@ -77,5 +85,16 @@ public class Pelicula {
     public void setDuracion(Integer duracion) {
         this.duracion = duracion;
     }
-    
+
+    public List<Reparto> getRepartos() {
+        return repartos;
+    }
+
+    public void setRepartos(List<Reparto> repartos) {
+        this.repartos = repartos;
+    }
+
+    // public void addRepartos(reparto)
+    // repartos.add();
+    // TODO - Metodo addRepartos por hacer aun
 }
