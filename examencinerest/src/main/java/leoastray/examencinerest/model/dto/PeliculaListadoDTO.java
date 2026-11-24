@@ -1,5 +1,5 @@
 package leoastray.examencinerest.model.dto;
 
-public record PeliculaListadoDTO() {
+public record PeliculaListadoDTO(Long id, String titulo, String director, Integer anio) {
 
 }

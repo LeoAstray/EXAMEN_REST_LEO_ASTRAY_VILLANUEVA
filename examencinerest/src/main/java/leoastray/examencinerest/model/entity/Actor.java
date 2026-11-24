@@ -66,7 +66,6 @@ public class Actor {
         return repartos;
     }
 
-
     public void setRepartos(List<Reparto> repartos) {
         this.repartos = repartos;
     }
