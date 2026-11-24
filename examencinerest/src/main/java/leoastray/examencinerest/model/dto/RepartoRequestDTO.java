@@ -1,5 +1,12 @@
 package leoastray.examencinerest.model.dto;
 
-public record RepartoRequestDTO(Long actorId, String personaje, Double salario) {
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.PositiveOrZero;
+
+public record RepartoRequestDTO(
+        @NotNull Long actorId,
+        @NotBlank String personaje,
+        @PositiveOrZero Double salario) {
 
 }

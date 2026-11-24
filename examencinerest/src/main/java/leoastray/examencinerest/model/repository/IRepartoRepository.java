@@ -6,4 +6,6 @@ import leoastray.examencinerest.model.entity.Reparto;
 
 public interface IRepartoRepository extends JpaRepository<Reparto, Long> {
 
+    boolean existsByPeliculaIdAndActorId(Long peliculaId, Long actorId);
+
 }

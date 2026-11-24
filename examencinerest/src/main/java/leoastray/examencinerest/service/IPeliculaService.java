@@ -5,6 +5,7 @@ import java.util.List;
 import leoastray.examencinerest.model.dto.PeliculaDetalleDTO;
 import leoastray.examencinerest.model.dto.PeliculaListadoDTO;
 import leoastray.examencinerest.model.dto.PeliculaRequestDTO;
+import leoastray.examencinerest.model.dto.RepartoRequestDTO;
 
 public interface IPeliculaService {
 
@@ -12,10 +13,13 @@ public interface IPeliculaService {
 
     List<PeliculaListadoDTO> leerLista();
 
-    PeliculaDetalleDTO leerDetalle(Long id);
-    //TODO - Metodo leerDetalle de peliculas
+    List<PeliculaListadoDTO> buscarPorAnio(Integer anio);
 
-    PeliculaListadoDTO actualizar(PeliculaRequestDTO dto);
+    PeliculaDetalleDTO leerDetalle(Long id);
+
+    PeliculaDetalleDTO agregarReparto(Long id, RepartoRequestDTO dto);
+
+    PeliculaListadoDTO actualizar(Long id, PeliculaRequestDTO dto);
 
     void eliminar(Long id);
 }
