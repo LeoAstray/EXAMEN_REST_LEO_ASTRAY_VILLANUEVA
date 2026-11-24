@@ -45,27 +45,27 @@ public class PeliculaController {
         return ResponseEntity.created(location).body(detalle);
     }
 
-    @GetMapping
-    public ResponseEntity<List<PeliculaListadoDTO>> getMethodName(PeliculaListadoDTO dto) {
-        Pelicula peliculas = peliculaRepository.findAll();
-        return ResponseEntity.ok().build();
-    }
+    // @GetMapping
+    //public ResponseEntity<List<PeliculaListadoDTO>> leerLista(PeliculaListadoDTO dto) {
+        //Pelicula peliculas = peliculaRepository.findAll();
+        //return ResponseEntity.ok().build();
+    //}
 
-    @GetMapping("/{id}")
-    public String getMethodName(@PathVariable Long id) {
+    //@GetMapping("/{id}")
+    //public String getMethodName(@PathVariable Long id) {
         //TODO
-        return new String();
-    }
+        //return new String();
+    //}
     
-    @PutMapping("path/{id}")
-    public String putMethodName(@PathVariable String id, @RequestBody String entity) {
+    //@PutMapping("path/{id}")
+    //public String putMethodName(@PathVariable String id, @RequestBody String entity) {
         //TODO
         
-        return entity;
-    }
+    //    return entity;
+    //}
     
-    @DeleteMapping
-    public void (Long id)
+    //@DeleteMapping
+    //public void (Long id)
     //TODO
-    return void;
+    //return void;
 }
