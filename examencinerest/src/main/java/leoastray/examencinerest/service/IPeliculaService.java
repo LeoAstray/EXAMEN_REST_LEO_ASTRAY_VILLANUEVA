@@ -6,13 +6,13 @@ import leoastray.examencinerest.model.dto.PeliculaRequestDTO;
 
 public interface IPeliculaService {
 
-    PeliculaDetalleDTO crear(PeliculaRequestDTO);
+    PeliculaDetalleDTO crear(PeliculaRequestDTO dto);
 
     PeliculaListadoDTO leerLista(Long id);
 
     PeliculaDetalleDTO leerDetalle(Long id);
 
-    PeliculaListadoDTO actualizar(PeliculaRequestDTO);
+    PeliculaListadoDTO actualizar(PeliculaRequestDTO dto);
 
     void eliminar(Long id);
 }

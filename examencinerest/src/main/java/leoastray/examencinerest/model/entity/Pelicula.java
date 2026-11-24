@@ -94,7 +94,8 @@ public class Pelicula {
         this.repartos = repartos;
     }
 
-    // public void addRepartos(reparto)
-    // repartos.add();
-    // TODO - Metodo addRepartos por hacer aun
+    public void addRepartos(Reparto reparto) {
+        repartos.add(reparto);
+        reparto.setPelicula(this);
+    }
 }
